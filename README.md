@@ -25,7 +25,7 @@ so artists can check their render setup in seconds — no digging through proper
 Check out a quick guide on how to use the tool: [Watch the Tool Demo](https://youtu.be/JPRIZQytD1I)
 
 ## Download
-[Click here for the latest release](https://github.com/AtsuMatsui/Nuke/releases/latest](https://github.com/AtsuMatsui/Write-to-BD-Tools/releases/tag/Write-to-BD-v1.0.0))
+[Click here for the latest release](https://github.com/AtsuMatsui/Write-to-BD-Tools/releases/tag/Write-to-BD-v1.0.0)
 
 ## Installation
 1. Place the `write_to_BD_tools` folder into your `.nuke` directory.
