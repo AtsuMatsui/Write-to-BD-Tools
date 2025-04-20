@@ -25,7 +25,7 @@ Write to BD Toolsは Write ノードの設定とプロジェクト設定を Back
 ツールの使い方についてはこちらの動画をご覧ください：[デモ動画を見る](https://youtu.be/JPRIZQytD1I)
 
 ## ダウンロード
-[最新のリリースはこちら](https://github.com/AtsuMatsui/Nuke/releases/latest)
+[最新のリリースはこちら](https://github.com/AtsuMatsui/Write-to-BD-Tools/releases/tag/Write-to-BD-v1.0.0)
 
 ## インストール方法
 1. `write_to_BD_tools` フォルダを `.nuke` ディレクトリに配置します。  
