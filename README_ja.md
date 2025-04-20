@@ -24,6 +24,10 @@ Write to BD Toolsは Write ノードの設定とプロジェクト設定を Back
 ## デモ動画
 ツールの使い方についてはこちらの動画をご覧ください：[デモ動画を見る](https://youtu.be/JPRIZQytD1I)
 
+## 互換性  
+NukeX, Nuke Indie 15.1v2 を Windows 環境でテスト済み。  
+Nuke 15 以降のバージョン（Python 3）でも動作する可能性があります。
+
 ## ダウンロード
 [最新のリリースはこちら](https://github.com/AtsuMatsui/Write-to-BD-Tools/releases/tag/Write-to-BD-v1.0.0)
 
