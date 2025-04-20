@@ -26,7 +26,7 @@ so artists can check their render setup in seconds — no digging through proper
 Check out a quick guide on how to use the tool: [Watch the Tool Demo](https://youtu.be/JPRIZQytD1I)
 
 ## Compatibility
-Tested in Nuke 15.1v2 (X & Indie) on Windows.  
+Tested in NukeX, Nuke Indie 15.1v2 on Windows.  
 Likely compatible with other Nuke 15+ versions (Python 3).
 
 ## Download
