@@ -119,7 +119,7 @@ and the motivation to experiment and refine the tool.
 
 ## Contact
 If you have any questions, feedback, or ideas, feel free to contact me 
-on Nukepedia or Email.  
+on Email.  
 Thank you for using Write_to_BD Tools!
 
 ###
