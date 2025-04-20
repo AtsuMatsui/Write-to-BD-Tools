@@ -12,6 +12,7 @@ so artists can check their render setup in seconds — no digging through proper
 
 ## Table of Contents
 - [Demo](#Demo)
+- [Compatibility](#Compatibility)
 - [Download](#Download)
 - [Installation](#installation)
 - [Description](#description)
