@@ -30,8 +30,8 @@ NukeX, Nuke Indie 15.1v2 を Windows 環境でテスト済み。
 Nuke 15 以降のバージョン（Python 3）でも動作する可能性があります。
 
 ## ダウンロード
-[最新のリリースはこちら](https://github.com/AtsuMatsui/Write-to-BD-Tools/releases/tag/Write-to-BD-v1.0.0)  
-[サンプルはこちら](https://github.com/AtsuMatsui/Write-to-BD-Tools/tree/main/SAMPLE_ja)
+- [最新のリリースはこちら](https://github.com/AtsuMatsui/Write-to-BD-Tools/releases/tag/Write-to-BD-v1.0.0)  
+- [サンプルはこちら](https://github.com/AtsuMatsui/Write-to-BD-Tools/tree/main/SAMPLE_ja)
 
 ## インストール方法
 1. `write_to_BD_tools` フォルダを `.nuke` ディレクトリに配置します。  
