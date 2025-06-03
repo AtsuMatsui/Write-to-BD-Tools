@@ -1,0 +1,68 @@
+set cut_paste_input [stack 0]
+version 15.1 v2
+BackdropNode {
+ inputs 0
+ name to_Backdrop1
+ tile_color 0x60d0a4ff
+ label "<font color=\"#FFFFFF\">PROJECT SETTINGS\n\nFirst frame: [knob root.first_frame]\nLast frame: [knob root.last_frame]\nFPS: [knob root.fps]\nFormat: [lindex [value root.format] end], [value root.format.width] x [value root.format.height]\nColor management: [knob root.colorManagement]\nOCIO config: [knob root.OCIO_config]\n\n---------------------\n\nWRITE NODE SETTINGS\n\nName: [set write_node Write_to_BD1]\nChannels: [knob $write_node.channels]\nFile: [knob $write_node.file]\nProxy: [knob $write_node.proxy]\nFile type: [knob $write_node.file_type]\nColorspace: [knob $write_node.colorspace]\nCreate directories: [if {[value $write_node.create_directories] == \"false\"} {return \"OFF\"} {return \"ON\"}]</font>"
+ note_font "Verdana Bold"
+ note_font_size 14
+ note_font_color 0xffffffff
+ selected true
+ xpos 698
+ ypos -734
+ appearance Border
+ border_width 12
+ bdwidth 312
+ bdheight 420
+ addUserKnob {20 user l User}
+ addUserKnob {26 space_3 l "" +STARTLINE T " "}
+ addUserKnob {22 duplicate_and_update l "<h3>Duplicate & Update</h3>" t "Duplicates selected nodes, applies horizontal offset, and updates the label of a backdrop node." T "# Import third-party modules\nimport nuke\n\n# Import local modules\nfrom write_to_BD_tools import node_duplicater\n\n# Initialize the node_duplicater object\nnode_dup = node_duplicater\n\n# Specify the original node names\noriginal_backdrop = \"to_Backdrop1\"\noriginal_write = \"Write_to_BD1\"\n\n# List of node names to duplicate\nnodes_to_duplicate = \[original_backdrop, original_write]\n\n# Number of times to duplicate the nodes\nduplication_count = 1  \n\n# Loop to duplicate nodes, disconnect them, apply position offsets\nfor i in range(1, duplication_count + 1):\n    duplicated_nodes = node_dup.duplicate_nodes(nodes_to_duplicate)\n    node_dup.disconnect_nodes(duplicated_nodes)\n    node_dup.apply_position_offset(\n        duplicated_nodes, x_offset=300,\n        y_offset=198\n    )\n\n    # Update the label if a backdrop node was duplicated\n    for node in duplicated_nodes:\n        if node.Class() == \"BackdropNode\":\n            node_dup.update_backdrop_label(node, original_write)\n" +STARTLINE}
+ addUserKnob {26 space_3_1 l "" +STARTLINE T " "}
+ addUserKnob {26 border l "" +STARTLINE}
+ addUserKnob {26 node_color l "" +STARTLINE T "<h2>Node Color</h2>"}
+ addUserKnob {26 space l "" +STARTLINE T " "}
+ addUserKnob {22 light_red l "<h1><font color=#FF9A9A><big>█</big></font></h1>" T "# Get selected nodes\nselected_nodes = nuke.selectedNodes()\n\n# Check if any nodes are selected\nif not selected_nodes:\n    nuke.message(\"No nodes selected.\")\nelse:\n    # Iterate over selected nodes and set color\n    for node in selected_nodes:\n        if \"tile_color\" in node.knobs():\n            node[\"tile_color\"].setValue(4288322049)\n" +STARTLINE}
+ addUserKnob {22 light_orange l "<h1><font color=#FFC48C><big>█</big></font></h1>" -STARTLINE T "# Get selected nodes\nselected_nodes = nuke.selectedNodes()\n\n# Check if any nodes are selected\nif not selected_nodes:\n    nuke.message(\"No nodes selected.\")\nelse:\n    # Iterate over selected nodes and set color\n    for node in selected_nodes:\n        if \"tile_color\" in node.knobs():\n            node[\"tile_color\"].setValue(4291070977)\n"}
+ addUserKnob {22 light_yellow l "<h1><font color=#FFFA8B><big>█</big></font></h1>" -STARTLINE T "# Get selected nodes\nselected_nodes = nuke.selectedNodes()\n\n# Check if any nodes are selected\nif not selected_nodes:\n    nuke.message(\"No nodes selected.\")\nelse:\n    # Iterate over selected nodes and set color\n    for node in selected_nodes:\n        if \"tile_color\" in node.knobs():\n            node[\"tile_color\"].setValue(4294609665)\n"}
+ addUserKnob {22 light_green l "<h1><font color=#B8FFA9><big>█</big></font></h1>" -STARTLINE T "# Get selected nodes\nselected_nodes = nuke.selectedNodes()\n\n# Check if any nodes are selected\nif not selected_nodes:\n    nuke.message(\"No nodes selected.\")\nelse:\n    # Iterate over selected nodes and set color\n    for node in selected_nodes:\n        if \"tile_color\" in node.knobs():\n            node[\"tile_color\"].setValue(3103762689)\n"}
+ addUserKnob {22 light_cyan l "<h1><font color=#A9FFF5><big>█</big></font></h1>" T "# Get selected nodes\nselected_nodes = nuke.selectedNodes()\n\n# Check if any nodes are selected\nif not selected_nodes:\n    nuke.message(\"No nodes selected.\")\nelse:\n    # Iterate over selected nodes and set color\n    for node in selected_nodes:\n        if \"tile_color\" in node.knobs():\n            node[\"tile_color\"].setValue(2852123905)\n" +STARTLINE}
+ addUserKnob {22 light_blue l "<h1><font color=#A9CBFF><big>█</big></font></h1>" -STARTLINE T "# Get selected nodes\nselected_nodes = nuke.selectedNodes()\n\n# Check if any nodes are selected\nif not selected_nodes:\n    nuke.message(\"No nodes selected.\")\nelse:\n    # Iterate over selected nodes and set color\n    for node in selected_nodes:\n        if \"tile_color\" in node.knobs():\n            node[\"tile_color\"].setValue(2848718593)\n"}
+ addUserKnob {22 light_purple l "<h1><font color=#ECA9FF><big>█</big></font></h1>" -STARTLINE T "# Get selected nodes\nselected_nodes = nuke.selectedNodes()\n\n# Check if any nodes are selected\nif not selected_nodes:\n    nuke.message(\"No nodes selected.\")\nelse:\n    # Iterate over selected nodes and set color\n    for node in selected_nodes:\n        if \"tile_color\" in node.knobs():\n            node[\"tile_color\"].setValue(3970563841)\n"}
+ addUserKnob {22 light_pink l "<h1><font color=#FFA9CF><big>█</big></font></h1>" -STARTLINE T "# Get selected nodes\nselected_nodes = nuke.selectedNodes()\n\n# Check if any nodes are selected\nif not selected_nodes:\n    nuke.message(\"No nodes selected.\")\nelse:\n    # Iterate over selected nodes and set color\n    for node in selected_nodes:\n        if \"tile_color\" in node.knobs():\n            node[\"tile_color\"].setValue(4289318657)\n"}
+ addUserKnob {26 border_1 l "" +STARTLINE}
+ addUserKnob {26 font_color l "" +STARTLINE T "<h2>Font Color</h2>"}
+ addUserKnob {26 space_4 l "" +STARTLINE T " "}
+ addUserKnob {22 black l "<h1><font color=#000000><big>█</big></font></h1>" t "Change white to black." T "# Import third-party modules\nimport nuke\n\n# Import built-in modules\nimport logging\n\n# Import local modules\nfrom log_setup import write_to_bd_log\n\n# Define the color to search and new color to replace\nsearch_color = \"#FFFFFF\"\nnew_color = \"#000000\"\n\n# Iterate through all selected nodes to find the selected backdrop and update its label\nupdated = False\nfor node in nuke.selectedNodes(\"BackdropNode\"):\n    label = node[\"label\"].value()\n    if search_color in label:\n        new_label = label.replace(search_color, new_color)\n        node[\"label\"].setValue(new_label)\n        updated = True\n\nif updated:\n    logger = logging.getLogger(\"write_to_bd_logger\")\n    logger.info(f\"Selected backdrop labels' color code changed to {new_color}.\")\nelse:\n    logger = logging.getLogger(\"write_to_bd_logger\")\n    logger.info(f\"Already colored to {new_color} or the selected backdrop label's color code {search_color} was not found.\")\n" +STARTLINE}
+ addUserKnob {22 white l "<h1><font color=#FFFFFF><big>█</big></font></h1>" t "Change black to white." -STARTLINE T "# Import third-party modules\nimport nuke\n\n# Import built-in modules\nimport logging\n\n# Import local modules\nfrom log_setup import write_to_bd_log\n\n# Define the color to search and new color to replace\nsearch_color = \"#000000\"\nnew_color = \"#FFFFFF\"\n\n# Iterate through all selected nodes to find the selected backdrop and update its label\nupdated = False\nfor node in nuke.selectedNodes(\"BackdropNode\"):\n    label = node[\"label\"].value()\n    if search_color in label:\n        new_label = label.replace(search_color, new_color)\n        node[\"label\"].setValue(new_label)\n        updated = True\n\nif updated:\n    logger = logging.getLogger(\"write_to_bd_logger\")\n    logger.info(f\"Selected backdrop labels' color code changed to {new_color}.\")\nelse:\n    logger = logging.getLogger(\"write_to_bd_logger\")\n    logger.info(f\"Already colored to {new_color} or the selected backdrop label's color code {search_color} was not found.\")\n"}
+ addUserKnob {26 border_1_2 l "" +STARTLINE}
+ addUserKnob {26 current_appearance_title l "" +STARTLINE T "<h2>Appearance</h2>"}
+ addUserKnob {26 space_4_1 l "" +STARTLINE T " "}
+ addUserKnob {22 current_appearance l <h3>Border</h3> t "Change the appearance to \"Border\" or \"Fill\"." +STARTLINE T "# Get the current knob\nthisKnob = nuke.thisKnob()\n\n# Get selected nodes\nselected_nodes = nuke.selectedNodes()\n\n# Check if any Backdrop nodes are selected\nif not any(node.Class() == \"BackdropNode\" for node in selected_nodes):\n    nuke.message(\"No Backdrop node selected.\")\nelse:\n    # Iterate over selected nodes and toggle \"appearance\" for Backdrop nodes\n    for node in selected_nodes:\n        if node.Class() == \"BackdropNode\":\n            current_value = node[\"appearance\"].value()\n\n            # Toggle between \"Fill\" and \"Border\"\n            if current_value == \"Fill\":\n                node[\"appearance\"].setValue(\"Border\")\n                thisKnob.setLabel(\"<h3>Border</h3>\")\n            else:\n                node[\"appearance\"].setValue(\"Fill\")\n                thisKnob.setLabel(\"<h3>Fill</h3>\")\n"}
+ addUserKnob {20 version l Version}
+ addUserKnob {26 description l "" +STARTLINE T "\nVersion 1.0.0\n"}
+ addUserKnob {26 border2_1 l "" +STARTLINE T =============================}
+ addUserKnob {26 copyright l "Copyright &copy; 2025 by Atsu Matsui" t copyright T .}
+ addUserKnob {26 border2_2 l "" +STARTLINE T =============================}
+ addUserKnob {26 contact l "" +STARTLINE T "         Contact : "}
+ addUserKnob {22 mail_to l Email -STARTLINE T "import webbrowser\nrecipient = \"contact@atsumatsui.com\"\nwebbrowser.open(\"mailto:?to=\" + recipient, new=1)"}
+ addUserKnob {26 more_tools l "" +STARTLINE T "     More tools : "}
+ addUserKnob {22 github l "GitHub" -STARTLINE T "import webbrowser\nwebbrowser.open(\"https://github.com/AtsuMatsui\")"}
+ addUserKnob {26 follow_me_on l "" +STARTLINE T " Follow me on : "}
+ addUserKnob {22 x_twitter l "X (Twitter)" -STARTLINE T "import webbrowser\nwebbrowser.open(\"https://x.com/Achi_LIG105\")"}
+}
+push $cut_paste_input
+Write {
+ file_type exr
+ first_part rgba
+ colorspace scene_linear
+ create_directories true
+ checkHashOnRead false
+ ocioColorspace scene_linear
+ display ACES
+ view sRGB
+ name Write_to_BD1
+ selected true
+ xpos 900
+ ypos -710
+}
