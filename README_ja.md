@@ -71,7 +71,7 @@ Nuke の仕様上、フレーム範囲の情報がBackdropノードに更新さ�
 - フォントカラーは白または黒を選択可能です。
 - Backdrop の見た目を Border（枠線）または Fill（枠内を埋める）のどちらかを選べます。
 
-<img src="image/duplicate_anim.gif" alt="required_connections" width="355"> <img src="image/others_anim.gif" alt="required_connections" width="200"> 
+<img src="image/duplicate_anim.gif" alt="required_connections" width="355"> <img src="image/others_anim.gif" alt="required_connections" width="200">  
 上記の機能はPython Script Button を押すと実行されるようになっています。
 
 ## デモ動画
