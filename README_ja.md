@@ -75,7 +75,7 @@ Nuke の仕様上、フレーム範囲の情報がBackdropノードに更新さ�
 上記の機能はPython Script Button を押すと実行されるようになっています。　  　
 ### 
 <img src="image/duplicate_and_update.png" alt="required_connections" width="300">  
-<img src="image/node_color.png" alt="required_connections" width="300"> <img src="image/black_text.png" alt="required_connections" width="300"> <img src="image/white_text.png" alt="required_connections" width="300">  
+<img src="image/node_color.png" alt="required_connections" width="200"> <img src="image/black_text.png" alt="required_connections" width="200"> <img src="image/white_text.png" alt="required_connections" width="200">  
 <img src="image/border.png" alt="required_connections" width="300">  
 
 ### ロギング機能:  
