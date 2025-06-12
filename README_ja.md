@@ -56,7 +56,9 @@ Nuke の仕様上、フレーム範囲の情報がBackdropノードに更新さ�
 2. 使用したい Write ノードの名前をコピーします。
 3. Backdrop ノードの Node タブにある Label へ以下の TCL コードを探します：  
    `Name: [set write_node Write_to_BD1]`
-4. `Write_to_BD1` を使用したいノード名（例：Write1）に置き換えます。  
+   <img src="image/backdrop_button.png" alt="required_connections" width="300">
+   
+5. `Write_to_BD1` を使用したいノード名（例：Write1）に置き換えます。  
 
 ### 使用例： 
 - 自分で書き出し設定とプロジェクト設定を確認したいとき。  
